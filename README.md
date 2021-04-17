@@ -45,6 +45,11 @@ After your system is set up as described above, download the latest package from
 on it and choose 'Open With -> Alfred'. You will be prompted to install the workflow, so go ahead.
 Next fire up the Alfred console (`Alt-Space` by default) and type one of the commands described below.
 
+## Download the Workflow
+[Click Here to Download](https://github.com/goldcoders/alfred-pass/raw/master/pass.alfredworkflow)
+
+Save , then Open in Finder
+
 ## Usage
 
 Basic Alfred commands:
@@ -56,22 +61,6 @@ This will search through your passwords using the filter terms you provided.
 The password will be copied to clipboard and cleared after 45 seconds (this is the default
 `pass -c` behavior).  You can change that time by modifying the env variable
 `PASSWORD_STORE_CLIP_TIME`. Or in the `pass-show.sh` file you can change this line
-
-```
-pass show -c $QUERY
-```
-
-into this one
-
-```
-pass show $QUERY | awk 'BEGIN{ORS=""} {print; exit}' | pbcopy
-```
-
-to avoid auto-clearing of clipboard.
-
-## `pass <entry>`
-
-This will Search for Specific Entry on Your Password Storage and Save the Password in Clipboard
 
 ## `generate <id>`
 
