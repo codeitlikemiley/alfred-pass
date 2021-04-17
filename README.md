@@ -1,4 +1,4 @@
-# An Alfred 2/3 Workflow for Pass
+# An Alfred 4 Working on Mac M1
 
 [Pacmax Page](https://pacmax.org/pac/cgenie-alfred-pass/)
 
