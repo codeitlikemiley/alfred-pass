@@ -67,7 +67,11 @@ into this one
 pass show $QUERY | awk 'BEGIN{ORS=""} {print; exit}' | pbcopy
 ```
 
-to aviod auto-clearing of clipboard.
+to avoid auto-clearing of clipboard.
+
+## `pass <entry>`
+
+This will Search for Specific Entry on Your Password Storage and Save the Password in Clipboard
 
 ## `generate <id>`
 
