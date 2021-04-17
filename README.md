@@ -1,4 +1,4 @@
-# An Alfred 4 Working on Mac M1
+# An Alfred 4 Workflow for Pass, Working on Mac M1
 
 [Pacmax Page](https://pacmax.org/pac/cgenie-alfred-pass/)
 
@@ -69,13 +69,17 @@ pass show $QUERY | awk 'BEGIN{ORS=""} {print; exit}' | pbcopy
 
 to aviod auto-clearing of clipboard.
 
-## `pg <id>`
+## `generate <id>`
 
 Calls `pass generate` to add a new password with default length of 20 chars.
 
-## `po <filter terms>`
+## `otp <filter terms>`
 
 This will search through your OTP passwords (requires `pass-otp`) using the filter terms you provided.
+
+## `user <filter terms>`
+
+This will search the username of the password entry if found.
 
 ## Development
 
