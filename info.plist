@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>pl.intrepidus.pass</string>
+	<string>m1.goldcoders.pass</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</key>
@@ -58,9 +60,35 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BC002215-F0BF-4EA4-8C8C-DB92194722CD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D62B91D9-D849-4830-B2E1-4F0A4B2B37A5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D62B91D9-D849-4830-B2E1-4F0A4B2B37A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>62C6E629-F3D4-43CB-A141-A14AAF432B23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Przemek Kamiński</string>
+	<string>Uriah Galang</string>
 	<key>description</key>
 	<string>Pass integration</string>
 	<key>disabled</key>
@@ -76,6 +104,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -114,7 +144,7 @@
 			<key>uid</key>
 			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -143,18 +173,20 @@
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>C7B97C94-3D0B-471E-96EE-A441A1FAB184</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -185,7 +217,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>pg</string>
+				<string>generate</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -207,6 +239,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -214,7 +248,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>po</string>
+				<string>otp</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -245,7 +279,7 @@
 			<key>uid</key>
 			<string>967E625E-D870-4298-9A7A-97C043740D99</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -270,10 +304,100 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>bash pass-username.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D62B91D9-D849-4830-B2E1-4F0A4B2B37A5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>62C6E629-F3D4-43CB-A141-A14AAF432B23</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>user</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python pass-filter.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Get password from pass</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BC002215-F0BF-4EA4-8C8C-DB92194722CD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>A workflow to integrate with Pass - the standard Unix password manager.
-See the README file at https://github.com/goldcoders/alfred-pass for more info.</string>
+	<string></string>
 	<key>uidata</key>
 	<dict>
 		<key>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</key>
@@ -281,7 +405,7 @@ See the README file at https://github.com/goldcoders/alfred-pass for more info.<
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<real>60</real>
+			<integer>60</integer>
 		</dict>
 		<key>0D9D4DE6-36FF-459E-9457-B3CAD298670C</key>
 		<dict>
@@ -296,6 +420,13 @@ See the README file at https://github.com/goldcoders/alfred-pass for more info.<
 			<integer>500</integer>
 			<key>ypos</key>
 			<real>300</real>
+		</dict>
+		<key>62C6E629-F3D4-43CB-A141-A14AAF432B23</key>
+		<dict>
+			<key>xpos</key>
+			<integer>665</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
@@ -318,6 +449,13 @@ See the README file at https://github.com/goldcoders/alfred-pass for more info.<
 			<key>ypos</key>
 			<real>180</real>
 		</dict>
+		<key>BC002215-F0BF-4EA4-8C8C-DB92194722CD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>420</integer>
+		</dict>
 		<key>C7B97C94-3D0B-471E-96EE-A441A1FAB184</key>
 		<dict>
 			<key>xpos</key>
@@ -325,7 +463,16 @@ See the README file at https://github.com/goldcoders/alfred-pass for more info.<
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
+		<key>D62B91D9-D849-4830-B2E1-4F0A4B2B37A5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>420</integer>
+		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>0.3.5</string>
 	<key>webaddress</key>
