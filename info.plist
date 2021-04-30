@@ -21,6 +21,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0D9D4DE6-36FF-459E-9457-B3CAD298670C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>03D8A2A0-5711-466F-81C0-5E7C5BB12497</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>118228AE-EF0F-48D4-AE63-F97A9290F4FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>705FA9F7-ABAA-408A-A3ED-BD01AC480E9A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<array>
 			<dict>
@@ -133,7 +159,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Get password from pass</string>
+				<string>Get Password</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -143,6 +169,25 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C7B97C94-3D0B-471E-96EE-A441A1FAB184</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -179,14 +224,35 @@
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>C7B97C94-3D0B-471E-96EE-A441A1FAB184</string>
+			<string>03D8A2A0-5711-466F-81C0-5E7C5BB12497</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>generate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Generate password</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>97122574-1811-40EE-8FA3-CA5A7E8CB809</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -214,23 +280,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>generate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Generate password</string>
-				<key>withspace</key>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>97122574-1811-40EE-8FA3-CA5A7E8CB809</string>
+			<string>705FA9F7-ABAA-408A-A3ED-BD01AC480E9A</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -268,7 +332,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Get OTP key from pass</string>
+				<string>Get OTP key</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -337,7 +401,7 @@
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -382,7 +446,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Get password from pass</string>
+				<string>Get Username</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -400,6 +464,13 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>03D8A2A0-5711-466F-81C0-5E7C5BB12497</key>
+		<dict>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
 		<key>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</key>
 		<dict>
 			<key>xpos</key>
@@ -427,6 +498,13 @@
 			<integer>665</integer>
 			<key>ypos</key>
 			<integer>420</integer>
+		</dict>
+		<key>705FA9F7-ABAA-408A-A3ED-BD01AC480E9A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>300</integer>
 		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
