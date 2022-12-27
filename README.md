@@ -1,5 +1,8 @@
 # An Alfred 4 Workflow for Pass, Working on Mac M1
 
+## Fix issue on python2 and 3 , follow this [link](https://www.alfredapp.com/help/kb/install-dependencies/)
+
+
 [Pacmax Page](https://pacmax.org/pac/cgenie-alfred-pass/)
 
 [Alfred forum page](https://www.alfredforum.com/topic/8471-pass-the-standard-unix-password-manager/)
