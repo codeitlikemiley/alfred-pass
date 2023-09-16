@@ -17,7 +17,6 @@ HOME = os.environ['HOME']
 PASS_DIR = os.environ.get('PASSWORD_STORE_DIR',os.path.join(HOME, '.password-store/'))
 
 
-# TODO: list_passwords creates cache of passwords for first time
 def list_passwords():
     ret = []
 
@@ -40,12 +39,11 @@ def search_passwords_fuzzy(query):
     passwords = list_passwords()
     return [entry[0] for entry in process.extract(query, passwords)]
 
-
 def search_passwords_filter(query):
     ''' Search passwords using the filter-based search, which doesn't require fuzzywuzzy'''
     ret = []
 
-    terms = filter(lambda x: x, query.lower().split())
+    terms = list(filter(lambda x: x, query.lower().split()))  # Updated filter to list
     passwords = list_passwords()
 
     for password in passwords:
@@ -57,12 +55,11 @@ def search_passwords_filter(query):
 
     return ret
 
-
 def xmlize_items(items, query):
     items_a = []
 
     for item in items:
-        list = string.rsplit(item, "/", 1)
+        list = item.rsplit("/", 1)  # Changed this line
         name = list[-1]
         path = item if len(list) == 2 else ""
 
@@ -86,7 +83,5 @@ def xmlize_items(items, query):
 </items>
     """ % '\n'.join(items_a)
 
-
 items = search_passwords(QUERY)
-print xmlize_items(items, QUERY)
-
+print(xmlize_items(items, QUERY))
