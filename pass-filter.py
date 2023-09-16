@@ -41,11 +41,13 @@ def search_passwords_fuzzy(query):
     return [entry[0] for entry in process.extract(query, passwords)]
 
 
+# ... (Previous code remains the same)
+
 def search_passwords_filter(query):
     ''' Search passwords using the filter-based search, which doesn't require fuzzywuzzy'''
     ret = []
 
-    terms = filter(lambda x: x, query.lower().split())
+    terms = list(filter(lambda x: x, query.lower().split()))  # Updated filter to list
     passwords = list_passwords()
 
     for password in passwords:
@@ -57,12 +59,13 @@ def search_passwords_filter(query):
 
     return ret
 
+# ... (Other parts of the code remain the same)
 
 def xmlize_items(items, query):
     items_a = []
 
     for item in items:
-        list = string.rsplit(item, "/", 1)
+        list = item.rsplit("/", 1)  # Changed this line
         name = list[-1]
         path = item if len(list) == 2 else ""
 
@@ -86,7 +89,6 @@ def xmlize_items(items, query):
 </items>
     """ % '\n'.join(items_a)
 
-
+# ... (rest of the code)
 items = search_passwords(QUERY)
-print xmlize_items(items, QUERY)
-
+print(xmlize_items(items, QUERY))
